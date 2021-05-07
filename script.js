@@ -20,8 +20,8 @@ function download(data, filename, type) {
 // Main function
 function commentsStrip(object){
     const RE_BLOCKS = new RegExp([
-      /\/(\*)[^*]*\*+(?:[^*\/][^*]*\*+)*\//.source,           // Multiline comment
-      /\/(\/)[^\n]*$/.source,                                 // One line comment
+      /\/(\*)[^*]*\*+(?:[^*\/][^*]*\*+)*\//.source,           // $1: Multiline comment
+      /\/(\/)[^\n]*$/.source,                                 // $2: One line comment
       /"(?:[^"\\]*|\\[\S\s])*"|'(?:[^'\\]*|\\[\S\s])*'|`(?:[^`\\]*|\\[\S\s])*`/.source,
       /(?:[$\w\)\]]|\+\+|--)\s*\/(?![*\/])/.source,           // Division operator
       /\/(?=[^*\/])[^[/\\]*(?:(?:\[(?:\\.|[^\]\\]*)*\]|\\.)[^[/\\]*)*?\/[gim]*/.source
